@@ -24,13 +24,8 @@ def load_image(filename):
 
 
 def unique_mask_values(idx, mask_dir, mask_suffix):
-    print('Index:',idx,'==>','Mask directory:',mask_dir,'==>','Mask suffix:',mask_suffix);
-    #input();
-    print("=o=")
-    print(list(mask_dir.glob(idx + mask_suffix + '.*')))
-    print("-----");
     mask_file = list(mask_dir.glob(idx + mask_suffix + '.*'))[0]
-    print(mask_file)
+    #print(mask_file)
     mask = np.asarray(load_image(mask_file))
     if mask.ndim == 2:
         return np.unique(mask)
