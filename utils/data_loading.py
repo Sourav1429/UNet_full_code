@@ -24,8 +24,8 @@ def load_image(filename):
 
 
 def unique_mask_values(idx, mask_dir, mask_suffix):
-    print(idx,'==>',mask_dir,'==>',mask_suffix);
-    input();
+    print('Index:',idx,'==>','Mask directory:',mask_dir,'==>','Mask suffix:',mask_suffix);
+    #input();
     print("=o=")
     print(list(mask_dir.glob(idx + mask_suffix + '.*')))
     print("-----");
